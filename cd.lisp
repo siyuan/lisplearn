@@ -53,3 +53,6 @@
 	     row) *db*)))
 (defun delete-rows (selector-fn)
   (setf *db* (remove-if selector-fn *db*)))
+;Removing Duplication and Winning Big
+(defun make-comparison-expr (field value)
+  (list 'equal (list 'getf 'cd field) value))
